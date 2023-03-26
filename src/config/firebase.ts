@@ -3,13 +3,14 @@ import { getFirestore } from "firebase/firestore";
 
 // TODO: Replace the following with your app's Firebase project configuration
 // See: https://support.google.com/firebase/answer/7015592
+const environment = import.meta.env;
 const firebaseConfig = {
-    apiKey: "AIzaSyBTvEHIr-faTZgax8LdeGd6iyRy6dSbM-w",
-    authDomain: "firestore-prueba-8cab6.firebaseapp.com",
-    projectId: "firestore-prueba-8cab6",
-    storageBucket: "firestore-prueba-8cab6.appspot.com",
-    messagingSenderId: "56738810793",
-    appId: "1:56738810793:web:f3c787dc15cc4d4a3052b8"
+    apiKey: environment.VITE_APIKEY,
+    authDomain: environment.VITE_AUTHDOMAIN,
+    projectId: environment.VITE_PROJECTID,
+    storageBucket: environment.VITE_STORAGEBUCKET,
+    messagingSenderId: environment.VITE_MESSAGINGSENDERID,
+    appId: environment.VITE_APPID
 };
 
 // Initialize Firebase
